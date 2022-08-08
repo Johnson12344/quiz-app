@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <!-- <form id="Calculator">
+        <table align="center">
+            <tr>
+                <td colspan="4"><input type="text" name="result" placeholder="0" style="text-align: right;"></td>
+            </tr>
+            <tr>
+                <td><button type="button" value="sin" onclick="sin()">sin</button></td>
+                <td><button type="button" value="sin" onclick="sin()">cos</button></td>
+                <td><button type="button" value="sin" onclick="sin()">tan</button></td>
+                <td colspan="2"><button class="num" onclick="clearScreen()">AC</button></td>
+                
+                
+            </tr>
+            <tr>
+                <td><button type="button" value="x^2" onclick="square()">x<sup>2</button></td>
+                <td><button type="button" value="x^2" onclick="cubed()">x<sup>3</button></td>
+                    <td><button type="button" value="sqrt2" onclick="squrt2()"> &radic; </button></td>
+                    <td><button type="button" value="sqrt3" onclick="squrt3()"> &#8731; </button></td>
+            </tr>
+            <tr>
+                <td><button class="num" onclick="display(1)">1</button></td>
+                <td><button class="num" onclick="display(2)">2</button></td>
+                <td><button class="num" onclick="display(3)">3</button></td>
+                <td><button class="num" onclick="remove()">C</button></td>
+            </tr>
+            <tr>
+                <td><button class="num" onclick="display(4)">4</button></td>
+                <td><button class="num" onclick="display(5)">5</button></td>
+                <td><button class="num" onclick="display(6)">6</button></td>
+                <td><button class="num" onclick="display('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="num" onclick="display(7)">7</button></td>
+                <td><button class="num" onclick="display(8)">8</button></td>
+                <td> <button class="num" onclick="display(9)">9</button></td>
+                <td><button class="num" onclick="display('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" value="." onclick="number(value)">.</button></td>
+                <td><button class="num" onclick="display(0)">0</button></td>
+                <td><button class="num" onclick="display('*')">*</button></td>
+                <td><button class="num" onclick="display('%')">%</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button class="calc" onclick="calc()">=</button></td>
+                <td><button type="button" value="+" onclick="number(value)" class="equal">+</button></td>
+                <td><button class="num" onclick="display('^')">^</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <div class="calcCont container my-3">
+        <div class="wholeCalc">
+            <div class="px-4">
+                <div class="display">
+                    <p id="prevDisplay" class="prevDisplayBox"></p>
+                    <p id="display" class="displayBox"></p>
+                </div>
+            </div>
+            <div class="calculator px-4">
+                <div class="numbers">
+                    <div class="container-fluid p-0">
+                        <div class="row g-0">
+                            <div class="col-3">
+                                <button class="num" onclick="remove()">C</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num" onclick="display('^')">^</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num" onclick="display('%')">%</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num">SQR</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid p-0">
+                        <div class="row g-0">
+                            <div class="col-3">
+                                <button class="num" onclick="display(7)">7</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num" onclick="display(8)">8</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num" onclick="display(9)">9</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num" onclick="display('/')">/</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid p-0">
+                        <div class="row g-0">
+                            <div class="col-3">
+                                <button class="num" onclick="display(4)">4</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num" onclick="display(5)">5</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num" onclick="display(6)">6</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num" onclick="display('*')">X</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid p-0">
+                        <div class="row g-0">
+                            <div class="col-3">
+                                <button class="num" onclick="display(1)">1</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num" onclick="display(2)">2</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num" onclick="display(3)">3</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num" onclick="display('-')">-</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid p-0">
+                        <div class="row g-0">
+                            <div class="col-3">
+                                <button class="num" onclick="clearScreen()">AC</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num" onclick="display(0)">0</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num" onclick="display('.')">.</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num" onclick="display('+')">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-4">
+                <button class="calc" onclick="calc()">=</button>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="container">
+        <div class="display">
+            <input id="screen" type="text" placeholder="0">
+        </div>
+
+        <div class="btns">
+            <div class="row">
+                <button class="btn" onclick="del">CE</button>
+                <button class="btn" onclick="fact">x!</button>
+                <button class="btn" onclick="num('(')">(</button>
+                <button class="btn" onclick="num(')')">)</button>
+                <button class="btn" onclick="per">%</button>
+                <button class="btn" onclick="ac()">AC</button>
+            </div>
+
+            <div class="row">
+                <button class="btn" onclick="sine()">sin</button>
+                <button class="btn" onclick="pi()">pi</button>
+                <button class="btn" onclick="num('7')">7</button>
+                <button class="btn" onclick="num('8')">8</button>
+                <button class="btn" onclick="num('9')">9</button>
+                <button class="btn" onclick="num('/')">/</button>
+            </div>
+
+            <div class="row">
+                <button class="btn" onclick="cos()">cos</button>
+                <button class="btn" onclick="logarithm()">log</button>
+                <button class="btn" onclick="num('4')">4</button>
+                <button class="btn" onclick="num('5')">5</button>
+                <button class="btn" onclick="num('6')">6</button>
+                <button class="btn" onclick="num('*')">*</button>
+            </div>
+
+            <div class="row">
+                <button class="btn" onclick="tan()">tan</button>
+                <button class="btn" onclick="sqrt()">&radic;</button>
+                <button class="btn" onclick="num('1')">1</button>
+                <button class="btn" onclick="num('2')">2</button>
+                <button class="btn" onclick="num('3')">3</button>
+                <button class="btn" onclick="num('-')">-</button>
+            </div>
+
+            <div class="row">
+                <button class="btn" onclick="atan()">tan-1</button>
+                <button class="btn" onclick="acos()">cos-1</button>
+                <button class="btn" onclick="asin()">sin-1</button>
+                <button class="btn" onclick="num('0')">0</button>
+                <button class="btn" onclick="num('.')">.</button>
+                <button class="btn" onclick="equal()">=</button>
+            </div>
+
+            <div class="row">
+                <button class="btn" onclick="rad()">rad</button>
+                <button class="btn" onclick="num('+')">+</button>
+                <button class="btn" onclick="square()">x&#178;</button>
+                <button class="btn" onclick="lan()">In</button>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- <form name="calculator">
+        <input type="text" id="txt">
+        <div class="row">
+            <input type="button" class="btn" value="CE" onclick="del()">
+            <input type="button" class="btn" value="x!" onclick="fact()">
+            <input type="button" class="btn" value=")" onclick="num('bar')">
+            <input type="button" class="btn" value="(" onclick="num('bar')">
+            <input type="button" class="btn" value="%" onclick="per()">
+            <input type="button" class="btn" value="AC" onclick="ac()">
+        </div>
+        <div class="row">
+            <input type="button" class="btn" value="sin" onclick="sine()">
+            <input type="button" class="btn" value="pi" onclick="pi()">
+            <input type="button" class="btn" value="7" onclick="num('7')">
+            <input type="button" class="btn" value="8" onclick="num('8')">
+            <input type="button" class="btn" value="9" onclick="num('9')">
+            <input type="button" class="btn" value="/" onclick="num('/')">
+        </div>
+        <div class="row">
+            <input type="button" class="btn" value="cos" onclick="cosine()">
+            <input type="button" class="btn" value="log" onclick="logarithm()">
+            <input type="button" class="btn" value="4" onclick="num('4')">
+            <input type="button" class="btn" value="5" onclick="num('5')">
+            <input type="button" class="btn" value="6" onclick="num('6')">
+            <input type="button" class="btn" value="*" onclick="num('*')">
+        </div>
+        <div class="row">
+            <input type="button" class="btn" value="tan" onclick="tan()">
+            <input type="button" class="btn" value="&radic;" onclick="sqrt()">
+            <input type="button" class="btn" value="1" onclick="num('1')">
+            <input type="button" class="btn" value="2" onclick="num('2')">
+            <input type="button" class="btn" value="3" onclick="num('3')">
+            <input type="button" class="btn" value="-" onclick="num('-')">
+        </div>
+        <div class="row">
+            <input type="button" class="btn" value="rad" onclick="rad()">
+            <input type="button" class="btn" value="x&#178;" onclick="square()">
+            <input type="button" class="btn" value="In" onclick="lan()">
+            <input type="button" class="btn" value="." onclick="num('.')">
+            <input type="button" class="btn" value="0" onclick="num('0')">
+            <input type="button" class="btn" value="+" onclick="num('+')">
+        </div>
+        <div class="row">
+            <input type="button" class="btn" value="tan-1" onclick="atan()">
+            <input type="button" class="btn" value="sin-1" onclick="asin()">
+            <input type="button" class="btn" value="cos-1" onclick="acos()">
+            <input type="button" class="btn" value="=" onclick="equal()">
+        </div>
+
+    </form> -->
+
+    <div class="center">
+        
+        <form name="forms" class="for">
+            <input name="display" class="tycoon" type="text">
+            <div class="stay">
+            <div class="row">
+            <div class="buttons">
+                <input type="button"class="bro" value="DEL" onclick="del()">
+                <input type="button"class="brot" value="x!" onclick="fact()">
+                <input type="button" class="bro"value="(" onclick="designate('(')">
+                <input type="button"class="bro" value=")" onclick="designate(')')">
+                <input type="button"class="brot" value="%" onclick="per()">
+                <input type="button" class="bro"value="AC" onclick="ac()">
+            </div>
+        </div>
+            <div class="row">
+            <div class="buttons">
+                <input type="button"class="brot" value="sin" onclick="sine()">
+                <input type="button" class="bro"value="pi" onclick="pi()">
+                <input type="button" class="bro" value="7" onclick="designate('7')">
+                <input type="button" class="bro" value="8" onclick="designate('8')">
+                <input type="button"class="bro" value="9" onclick="designate('9')">
+                <input type="button" class="bro"value="/" onclick="designate('/')">
+            </div>
+        </div>
+            <div class="row">
+            <div class="buttons">
+                <input type="button" class="brot"value="cos" onclick="cos()">
+                <input type="button" class="brot"value="log" onclick="logarithm()">
+                <input type="button" class="bro"value="4" onclick="designate('4')">
+                <input type="button" class="bro"value="5" onclick="designate('5')">
+                <input type="button" class="bro"value="6" onclick="designate('6')">
+                <input type="button" class="bro"value="*" onclick="designate('*')">
+            </div>
+        </div>
+            <div class="row">
+            <div class="buttons">
+                <input type="button"class="brot" value="tan" onclick="tan()">
+                <input type="button" class="bro"value="&#8730" onclick="sqrt()">
+                <input type="button"class="bro" value="1" onclick="designate('1')">
+                <input type="button" class="bro"value="2" onclick="designate('2')">
+                <input type="button" class="bro"value="3" onclick="designate('3')">
+                <input type="button" class="bro"value="-" onclick="designate('-')">
+            </div>
+        </div>
+            <div class="row">
+            <div class="buttons">
+                <input type="button" class="brot"value="rad" onclick="rad()">
+                <input type="button" class="brot"value="x&#178" onclick="square()">
+                <input type="button"class="bro" value="In" onclick="lan()">
+                <input type="button"class="bro" value="." onclick="designate('.')">
+                <input type="button"class="bro" value="0" onclick="designate('0')">
+                <input type="button" class="bro"value="+" onclick="designate('+')">
+            </div>
+        </div>
+            <div class="row">
+            <div class="buttons">
+                <input type="button"  class="brot"value="tan-1" onclick="atan()">
+                <input type="button" class="brot" value="cos-1" onclick="acos()">
+                <input type="button"  class="brot"value="sin-1" onclick="asine()">
+                <input type="button"  class="bro"value="=" onclick="equal()">
+            </div>
+        </div>
+    </div>
+
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="calc.js"></script>
+</body>
+</html>

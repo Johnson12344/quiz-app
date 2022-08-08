@@ -1,0 +1,76 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ecf0f3;
+    
+}
+.center{
+    width: 80%;
+    height: 100%;
+}
+
+.for{
+    width: 55%;
+    height: 50vh;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 12px 12px 20px #cbced1,
+                -12px -12px 20px #ffffff;
+
+}
+.stay{
+    display: flex;
+    padding-top: 8px;
+    align-items: center;
+    padding-left: 25px;
+}
+.tycoon{
+    width: 97%;
+    height: 70px;
+    font-size: 35px;
+    outline: none;
+    border: none;
+    text-align: right;
+    padding-right: 0.5rem;
+    background: white;
+    border-radius: 6px;
+    box-shadow: inset 8px 8px 8px #cbced1,
+    inset -8px -8px 8px #cbced1;
+}
+
+.buttons{
+    width: 100%;
+    margin-top: 1.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttons .bro{
+    width: 80px;
+    height: 30px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 8px #00000020,
+    -5px -5px 8px #ffffffff;
+}
+
+.buttons .brot{
+    width: 80px;
+    height: 30px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 8px #c26f02cb,
+    -5px -5px 8px #ffffffff;
+}
